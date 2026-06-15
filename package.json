@@ -5,9 +5,13 @@
     "install-all": "cd server && npm install && cd ../frontend && npm install",
     "start-server": "cd server && npm start",
     "start-client": "cd frontend && npm run dev",
+    "build": "cd frontend && npm install && npm run build",
     "dev": "concurrently \"npm run start-server\" \"npm run start-client\""
   },
   "devDependencies": {
     "concurrently": "^9.1.0"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.14"
   }
 }
