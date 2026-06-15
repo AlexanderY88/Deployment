@@ -2,11 +2,11 @@ import express from "express";
 
 const route = express.Router();
 
-app.get("/api/foo", (req, res) => {
+route.get("/foo", (req, res) => {
   res.json("hello from backend");
 });
 
-app.use("/api", (req, res) => {
+route.get("/", (req, res) => {
   res.json({ message: "hello from api" });
 });
 

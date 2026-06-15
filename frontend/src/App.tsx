@@ -7,11 +7,11 @@ function App() {
   const [error, setError] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api")
+    fetch(import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api")
       .then((response) => response.json())
       .then(setData)
       .catch((error) => setError(error.message));
-  });
+  }, []);
 
   return (
     <>
