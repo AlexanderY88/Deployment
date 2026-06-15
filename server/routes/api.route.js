@@ -7,7 +7,7 @@ route.get("/foo", (req, res) => {
 });
 
 route.get("/", (req, res) => {
-  res.json({ message: "hello from api" });
+  res.json({ message: "Hello from api!" });
 });
 
 export default route;
